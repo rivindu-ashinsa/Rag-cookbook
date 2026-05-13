@@ -6,3 +6,7 @@ pymupdf
 openai
 huggingface_hub
 openai
+sentence-transformers
+faiss-cpu
+chromadb
+numpy

@@ -12,20 +12,20 @@ message = client.chat.completions.create(
     messages=[
         {
             "role": "system",
-            "content": "You are a helpful assistant. Answer with minimum tokens."
+            "content": "You are a helpful assistant specialized in web sites and movie downloads"
         },
         {
             "role": "user",
-            "content": "What is the capital of France?"
+            "content": "Tell me some web sites where I can download movies for free"
         }
     ],
 )
 
 
-embedding_client = InferenceClient(
-    provider="hf-inference",
-    api_key=os.environ["HF_TOKEN"],
-)
+# embedding_client = InferenceClient(
+#     provider="hf-inference",
+#     api_key=os.environ["HF_TOKEN"],
+# )
 
 # result = embedding_client.sentence_similarity(
 #     "That is a happy person",
@@ -38,7 +38,7 @@ embedding_client = InferenceClient(
 # )
 
 
-result = embedding_client.feature_extraction("What is the capital of France?")
+# result = embedding_client.feature_extraction("What is the capital of France?")
 
 print(message.choices[0].message.content)
-print(result)
+# print(result)
